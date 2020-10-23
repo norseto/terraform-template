@@ -4,7 +4,7 @@
   "name": "Terraform",
   "dockerFile": "Dockerfile",
   "build": {
-    "args": { "VARIANT": "0.13"}
+    "args": { "VARIANT": "0.13-full"}
   },
   "runArgs": [
     // Uncomment the next line if you will use a ptrace-based debugger like C++, Go, and Rust.
@@ -38,6 +38,8 @@
   },
   "mounts": [
     "source=${localWorkspaceFolder}/.devcontainer/extensions,target=/root/.vscode-server/extensions,type=bind,consistency=cached",
-    "source=${localWorkspaceFolder}/.devcontainer/credentials,target=/root/.aws,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/credentials/aws,target=/root/.aws,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/credentials/gcp,target=/root/.config/gcloud,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.devcontainer/credentials/azure,target=/root/.azure,type=bind,consistency=cached",
   ]
 }

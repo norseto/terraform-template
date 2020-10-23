@@ -4,15 +4,15 @@
 First you should select the container image in which the CLI is installed.
 Open .devcontainer/devcontainer.json and edit the line below.
 ```
-    "args": { "VARIANT": "0.13"}
+    "args": { "VARIANT": "0.13-full"}
 ```
 
 Supported variant are:
-- 0.13-slim
 - 0.13
 - 0.13-gcp
 - 0.13-azure
 - 0.13-aws
+- 0.13-full
 
 For more detail, see https://hub.docker.com/repository/docker/norseto/dev-terraform
 
