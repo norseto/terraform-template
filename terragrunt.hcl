@@ -10,7 +10,8 @@ terraform {
       "plan",
       "import",
       "push",
-      "refresh"
+      "refresh",
+      "destroy"
     ]
     optional_var_files = [
       "${get_parent_terragrunt_dir()}/variables.tfvars.json",
