@@ -5,18 +5,6 @@ locals {
   common-config = yamldecode(file("${find_in_parent_folders("common-config.yaml")}"))
 }
 
-terraform {
-  extra_arguments "conditional_vars" {
-    commands = [
-      "apply",
-      "plan",
-      "import",
-      "push",
-      "refresh"
-    ]
-  }
-}
-
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite_terragrunt"
@@ -29,7 +17,7 @@ EOF
 }
 
 inputs = {
-  region = "${local.common-config.aws.default_region}"
+  region         = "${local.common-config.aws.default_region}"
   backend_bucket = local.common-config.aws.backend_bucket
-  backend_lock = local.common-config.aws.backend_lock
+  backend_lock   = local.common-config.aws.backend_lock
 }

@@ -6,15 +6,6 @@ locals {
 }
 
 terraform {
-  extra_arguments "conditional_vars" {
-    commands = [
-      "apply",
-      "plan",
-      "import",
-      "push",
-      "refresh"
-    ]
-  }
 }
 
 generate "provider" {

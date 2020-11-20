@@ -5,19 +5,20 @@ locals {
 
 terraform {
   extra_arguments "conditional_vars" {
-    commands = [
-      "apply",
-      "plan",
-      "import",
-      "push",
-      "refresh",
-      "destroy"
-    ]
+    commands = get_terraform_commands_that_need_vars()
     optional_var_files = [
       "${get_parent_terragrunt_dir()}/variables.tfvars.json",
       "${get_terragrunt_dir()}/../variables.tfvars.json",
       "${get_terragrunt_dir()}/variables.tfvars.json",
     ]
+  }
+  extra_arguments "disable_input" {
+    commands  = get_terraform_commands_that_need_input()
+    arguments = ["-input=false"]
+  }
+  extra_arguments "retry_lock" {
+    commands  = get_terraform_commands_that_need_locking()
+    arguments = ["-lock-timeout=20m"]
   }
 }
 

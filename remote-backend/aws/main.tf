@@ -1,3 +1,7 @@
+/**
+ * # AWS Remote Backend Creation
+ * Edit `common-config.yaml` in the top directory and run terragrunt to create remote backend.
+ */
 resource "aws_s3_bucket" "main" {
   bucket = var.backend_bucket
 

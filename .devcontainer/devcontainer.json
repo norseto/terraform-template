@@ -21,7 +21,8 @@
   // Uncomment the next line to run commands after the container is created.
   // "postCreateCommand": "terraform --version",
   "extensions": [
-    "hashicorp.terraform",
+    // "hashicorp.terraform",
+    "4ops.terraform",
     "editorconfig.editorconfig",
     "wholroyd.hcl",
     // "ms-azuretools.vscode-azureterraform",

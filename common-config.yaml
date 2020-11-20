@@ -4,10 +4,10 @@ aws:
 
   # Backend configuration
   backend_bucket: "[BACKEND BUCKET]"
-  backend_lock: "[TABLE NAME]"
+  backend_lock:   "[TABLE NAME]"
 
   # Common configuration
-  default_region: ap-northeast-1
+  default_region: "[YOUR_REGION]"
 
 # GCP Provider
 gcp:
@@ -17,16 +17,18 @@ gcp:
   backend_bucket: "[BUCKET NAME]"
 
   # Common configuration
-  default_region: asia-northeast1
-  default_zone:   asia-northeast1-a
+  default_region: "[YOUR_REGION]"
+  default_zone:   "[YOUR_ZONE]"
 
 # Azure Provider
 azure:
   provider_version: "~> 2.32.0"
+
   default_tenant_id: "[TENANT ID]"
   default_subscription_id: "[SUBSCRIPYION ID]"
   default_rgname: "[RESOURCE GROUP NAME]"
   default_region: "[REGION]"
-  backend_rgname: "[RESOURCE GROUP NAME]"
-  backend_acctname: "[STORAGE ACCOUNT NAME]"
+
+  backend_rgname:        "[RESOURCE GROUP NAME]"
+  backend_acctname:      "[STORAGE ACCOUNT NAME]"
   backend_containername: "[STORAGE CONTAINER NAME]"
