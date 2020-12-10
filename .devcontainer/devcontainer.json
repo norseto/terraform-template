@@ -41,6 +41,8 @@
     "source=${localWorkspaceFolder}/.devcontainer/extensions,target=/root/.vscode-server/extensions,type=bind,consistency=cached",
 		"source=${localWorkspaceFolder}/.devcontainer/credentials/aws,target=/root/.aws,type=bind,consistency=cached",
 		"source=${localWorkspaceFolder}/.devcontainer/credentials/gcp,target=/root/.config/gcloud,type=bind,consistency=cached",
-		"source=${localWorkspaceFolder}/.devcontainer/credentials/azure,target=/root/.azure,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.devcontainer/credentials/azure,target=/root/.azure,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.devcontainer/terraform,target=/root/.terraform.d,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.devcontainer/terraformrc,target=/root/.terraformrc,type=bind,consistency=cached",
   ]
 }
